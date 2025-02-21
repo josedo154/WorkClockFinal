@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "correo": "juan.perez@example.com",
+    "telefono": "123456789",
+    "usuario": "cord1",
+    "password": "cord_1",
+    "listaIdEmpleados": [1,2]
+  },
+  {
+    "id": 2,
+    "nombre": "María",
+    "apellido": "López",
+    "correo": "maria.lopez@example.com",
+    "telefono": "987654321",
+    "usuario": "cord2",
+    "password": "cord_2",
+    "listaIdEmpleados": [3,4,5,6,7,8]
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos",
+    "apellido": "Gómez",
+    "correo": "carlos.gomez@example.com",
+    "telefono": "555123456",
+    "usuario": "cord3",
+    "password": "cord_3",
+    "listaIdEmpleados": []
+  }
+]
