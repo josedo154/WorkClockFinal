@@ -1,5 +1,3 @@
-import { hashPassword, validatePassword } from '../../funcionalidades/hast';
-
 export class Coordinador {
   id: number;
 
@@ -23,6 +21,6 @@ export class Coordinador {
     this.correo = correo;
     this.telefono = telefono;
     this.usuario = usuario;
-    this.password = hashPassword(password);
+    this.password = password;
   }
 }

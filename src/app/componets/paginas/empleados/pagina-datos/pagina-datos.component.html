@@ -1,1 +1,22 @@
-<p>pagina-datos works!</p>
+<app-header></app-header>
+
+<div class="container mt-4">
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+      <tr>
+        <th>Día</th>
+        <th>Hora de Inicio</th>
+        <th>Hora Final</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let jornada of jornadas">
+        <td>{{ jornada.inicioJornada ? (jornada.inicioJornada | date: 'yyyy-MM-dd') : 'Sin datos' }}</td>
+        <td>{{ jornada.inicioJornada ? (jornada.inicioJornada | date: 'HH:mm:ss') : 'Sin datos' }}</td>
+        <td>{{ jornada.finJornada ? (jornada.finJornada | date: 'HH:mm:ss') : 'Sin datos' }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

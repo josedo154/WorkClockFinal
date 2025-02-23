@@ -1,90 +1,122 @@
 [
   {
     "id": 1,
-    "nombre": "Ana",
-    "apellido": "Martinez",
-    "correo": "ana.martinez@example.com",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "correo": "juan.perez@ejemplo.com",
     "telefono": "123456789",
-    "usuario": "empleado1",
-    "password": "empl_1",
-    "idCoordinador": 1,
-    "jornadas": []
+    "usuario": "juanp",
+    "password": "1234",
+    "idCoordinador": 3,
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T08:00:00Z",
+        "finJornada": "2025-02-24T16:00:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T09:00:00Z",
+        "finJornada": "2025-02-25T17:00:00Z"
+      }
+    ]
   },
   {
     "id": 2,
-    "nombre": "Luis",
-    "apellido": "Garcia",
-    "correo": "luis.garcia@example.com",
+    "nombre": "Ana",
+    "apellido": "Gómez",
+    "correo": "ana.gomez@ejemplo.com",
     "telefono": "234567890",
-    "usuario": "empleado2",
-    "password": "empl_2",
+    "usuario": "anag",
+    "password": "5678",
     "idCoordinador": 1,
-    "jornadas": []
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T07:30:00Z",
+        "finJornada": "2025-02-24T15:30:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T08:30:00Z",
+        "finJornada": "2025-02-25T16:30:00Z"
+      }
+    ]
   },
   {
     "id": 3,
-    "nombre": "Elena",
-    "apellido": "Rodriguez",
-    "correo": "elena.rodriguez@example.com",
+    "nombre": "Carlos",
+    "apellido": "Martínez",
+    "correo": "carlos.martinez@ejemplo.com",
     "telefono": "345678901",
-    "usuario": "empleado3",
-    "password": "empl_3",
+    "usuario": "carlosm",
+    "password": "91011",
     "idCoordinador": 2,
-    "jornadas": []
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T10:00:00Z",
+        "finJornada": "2025-02-24T18:00:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T11:00:00Z",
+        "finJornada": "2025-02-25T19:00:00Z"
+      }
+    ]
   },
   {
     "id": 4,
-    "nombre": "Carlos",
-    "apellido": "Hernandez",
-    "correo": "carlos.hernandez@example.com",
+    "nombre": "Lucía",
+    "apellido": "López",
+    "correo": "lucia.lopez@ejemplo.com",
     "telefono": "456789012",
-    "usuario": "empleado4",
-    "password": "empl_4",
-    "idCoordinador": 2,
-    "jornadas": []
+    "usuario": "lucial",
+    "password": "1213",
+    "idCoordinador": 4,
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T08:30:00Z",
+        "finJornada": "2025-02-24T16:30:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T09:30:00Z",
+        "finJornada": "2025-02-25T17:30:00Z"
+      }
+    ]
   },
   {
     "id": 5,
-    "nombre": "Sofía",
-    "apellido": "Lopez",
-    "correo": "sofia.lopez@example.com",
+    "nombre": "Pedro",
+    "apellido": "Ramírez",
+    "correo": "pedro.ramirez@ejemplo.com",
     "telefono": "567890123",
-    "usuario": "empleado5",
-    "password": "empl_5",
-    "idCoordinador": 2,
-    "jornadas": []
+    "usuario": "pedror",
+    "password": "1415",
+    "idCoordinador": 5,
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T07:00:00Z",
+        "finJornada": "2025-02-24T15:00:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T08:00:00Z",
+        "finJornada": "2025-02-25T16:00:00Z"
+      }
+    ]
   },
   {
     "id": 6,
-    "nombre": "Miguel",
+    "nombre": "María",
     "apellido": "Sánchez",
-    "correo": "miguel.sanchez@example.com",
+    "correo": "maria.sanchez@ejemplo.com",
     "telefono": "678901234",
-    "usuario": "empleado6",
-    "password": "empl_6",
-    "idCoordinador": 2,
-    "jornadas": []
-  },
-  {
-    "id": 7,
-    "nombre": "Laura",
-    "apellido": "Díaz",
-    "correo": "laura.diaz@example.com",
-    "telefono": "789012345",
-    "usuario": "empleado7",
-    "password": "empl_7",
-    "idCoordinador": 2,
-    "jornadas": []
-  },
-  {
-    "id": 8,
-    "nombre": "Diego",
-    "apellido": "Ramírez",
-    "correo": "diego.ramirez@example.com",
-    "telefono": "890123456",
-    "usuario": "empleado8",
-    "password": "empl_8",
-    "idCoordinador": 2,
-    "jornadas": []
+    "usuario": "marias",
+    "password": "1617",
+    "idCoordinador": 3,
+    "jornadas": [
+      {
+        "inicioJornada": "2025-02-24T09:00:00Z",
+        "finJornada": "2025-02-24T17:00:00Z"
+      },
+      {
+        "inicioJornada": "2025-02-25T10:00:00Z",
+        "finJornada": "2025-02-25T18:00:00Z"
+      }
+    ]
   }
 ]

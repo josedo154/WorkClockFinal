@@ -11,5 +11,8 @@ import {RouterLink} from '@angular/router';
 })
 
 export class SelecionCuentaComponent {
-
+  ngOnInit(): void {
+    console.log('Clear LocalStore');
+    localStorage.clear();
+  }
 }

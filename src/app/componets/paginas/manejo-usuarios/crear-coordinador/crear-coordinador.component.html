@@ -1,1 +1,68 @@
-<p>crear-coordinador works!</p>
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="container p-4 bg-white rounded shadow text-center" style="max-width: 600px;">
+    <h2>Crear Cuenta Coordinador</h2>
+    <hr>
+    <form [formGroup]="formulario" class="mt-3">
+      <h3>Datos de cuenta</h3>
+
+      <div class="mb-3 text-start">
+        <label for="usuario" class="form-label text-start">Usuario: </label>
+        <input id="usuario" type="text" class="form-control" placeholder="Username" formControlName="usuario">
+        <div class="text-danger" *ngIf="formulario.get('usuario')?.invalid && formulario.get('usuario')?.touched">
+          El usuario necesita almenos de 3 caracteres
+        </div>
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="password" class="form-label text-start">Contraseña: </label>
+        <input id="password" type="password" class="form-control" placeholder="Password" formControlName="clave">
+        <div class="text-danger" *ngIf="formulario.get('clave')?.invalid && formulario.get('clave')?.touched">
+          La contraseña necesita almenos 6 caracteres y contener un numero y una letra
+        </div>
+      </div>
+
+      <hr>
+      <h3>Datos personales</h3>
+
+      <div class="mb-3 text-start">
+        <label for="nombre" class="form-label text-start">Nombre: </label>
+        <input id="nombre" type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+        <div class="text-danger" *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+          El nombre necesita almenos 3 caracteres
+        </div>
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="apellido" class="form-label text-start">Apellido: </label>
+        <input id="apellido" type="text" class="form-control" placeholder="Apellidos" formControlName="apellido">
+        <div class="text-danger" *ngIf="formulario.get('apellido')?.invalid && formulario.get('apellido')?.touched">
+          El apellido necesita almenos 3 caracteres
+        </div>
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="email" class="form-label text-start">Email: </label>
+        <input id="email" type="email" class="form-control" placeholder="Correo Electrónico" formControlName="email">
+        <div class="text-danger" *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched">
+          El email no es valido, ingrese uno valido
+        </div>
+      </div>
+
+      <div class="mb-3 text-start">
+        <label for="telefono" class="form-label text-start">Número de Teléfono: </label>
+        <input id="telefono" type="text" class="form-control" placeholder="Número Teléfono" formControlName="telefono">
+        <div class="text-danger" *ngIf="formulario.get('telefono')?.invalid && formulario.get('telefono')?.touched">
+          El numero de telefono no es valido
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+    </form>
+
+    <br>
+    <a [routerLink]="'/crear-empleado'" class="d-block">Crear cuenta Empleado</a>
+    <a [routerLink]="'/login'" class="d-block">Iniciar Sesión</a>
+  </div>
+</div>
+
+

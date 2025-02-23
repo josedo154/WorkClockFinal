@@ -1,1 +1,49 @@
-<p>pagina-mis-datos works!</p>
+<app-header></app-header>
+
+<div class="align-content-center">
+  <div class="container border rounded-4 shadow p-4 m-4">
+    <h3>Datos de Usuario: </h3>
+    <div class="mb-3">
+      <label for="usuario" class="form-label">Nombre de usuario:</label>
+      <input type="text" class="form-control" id="usuario" [value]="empleado?.data.usuario || 'No disponible'" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo Electrónico:</label>
+      <input type="text" class="form-control" id="correo" [value]="empleado?.data.correo || 'No disponible'" readonly>
+    </div>
+
+    <hr>
+
+    <h3>Datos Personales: </h3>
+    <div class="mb-3">
+      <label for="nombreCompleto" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="nombreCompleto"
+             [value]="empleado ? (empleado.data.nombre + ' ' + empleado.apellido) : 'No disponible'" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Número de Teléfono:</label>
+      <input type="text" class="form-control" id="telefono" [value]="empleado?.data.telefono || 'No disponible'" readonly>
+    </div>
+
+    <hr>
+
+    <h3>Tu Coordinador</h3>
+    <div class="mb-3">
+      <label for="coordinadorNombre" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="coordinadorNombre"
+             [value]="coordinador ? (coordinador?.data.nombre + ' ' + coordinador?.data.apellido) : 'No disponible'" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="coordinadorCorreo" class="form-label">Correo Electrónico:</label>
+      <input type="text" class="form-control" id="coordinadorCorreo" [value]="coordinador?.data.correo || 'No disponible'" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="coordinadorTelefono" class="form-label">Número de Teléfono:</label>
+      <input type="text" class="form-control" id="coordinadorTelefono" [value]="coordinador?.data.telefono || 'No disponible'" readonly>
+    </div>
+  </div>
+</div>

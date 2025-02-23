@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
-import { CoordinadorService } from '../../../../services/coordinador.service';
-import { EmpleadosService } from '../../../../services/empleados.service';
+import { Router } from '@angular/router';
+import {FormGroup, FormControl, ReactiveFormsModule} from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { CoordinadorService } from '../../../../services/coordinadores.service';
+import { EmpleadoService } from '../../../../services/empleados.service';
 import { Coordinador } from '../../../../model/Coordinador';
 import { Empleado } from '../../../../model/Empleado';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink],
-  templateUrl: './login.component.html',
   standalone: true,
-  styleUrl: './login.component.css',
+  imports: [RouterLink, HttpClientModule, ReactiveFormsModule],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   formulario = new FormGroup({
@@ -19,32 +21,38 @@ export class LoginComponent {
     clave: new FormControl(''),
   });
 
+  coord?: Coordinador;
+  empl?: Empleado;
+
   constructor(
     private router: Router,
-    private servicioCoord: CoordinadorService,
-    private serviceEmp: EmpleadosService
+    private coordinadorService: CoordinadorService,
+    private empleadoService: EmpleadoService
   ) {}
 
-  async validacionLogin() {
-    const user = this.formulario.value.usuario;
-    if (!user) {
-      console.log('Por favor, ingrese un usuario.');
-      return;
+  login() {
+    const usuario = this.formulario.value.usuario;
+    const clave = this.formulario.value.clave;
+
+    console.log(usuario);
+    console.log(clave);
+
+    if (typeof usuario === 'string' && usuario.trim() !== '') {
+      this.coord = this.coordinadorService.getCoordinadorByUsuario(usuario);
+      this.empl = this.empleadoService.getCoordinadorByUsuario(usuario);
     }
 
-    try {
-      const coord = await this.servicioCoord.findUsuario(user);
-      const empl = await this.serviceEmp.findUsuario(user);
-
-      if (coord) {
-        console.log('Coordinador encontrado:', coord);
-      } else if (empl) {
-        console.log('Empleado encontrado:', empl);
-      } else {
-        console.log('No se encontró el usuario.');
-      }
-    } catch (error) {
-      console.error('Error al realizar la validación del login:', error);
+    if (this.coord && this.coord.password == clave) {
+      localStorage.setItem('usuario', JSON.stringify({ tipo: 'coordinador', data: this.coord }));
+      this.router.navigate(['/coordinador/datos']);
+      console.log("login coordinador !!!!!!!!!!!!!!!!!!!!");
+    } else if (this.empl && this.empl.password == clave) {
+      localStorage.setItem('usuario', JSON.stringify({ tipo: 'empleado', data: this.empl }));
+      this.router.navigate(['/empleado/datos']);
+      console.log("login empleados !!!!!!!!!!!!!!!!!!!!");
+    }else{
+      console.log("No login")
     }
   }
 }
+

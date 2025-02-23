@@ -1,5 +1,4 @@
 import {Jornada} from './Jornada';
-import { hashPassword, validatePassword } from '../../funcionalidades/hast';
 
 export class Empleado {
   id: number;
@@ -25,7 +24,7 @@ export class Empleado {
     this.correo = correo;
     this.telefono = telefono;
     this.usuario = usuario;
-    this.password = hashPassword(password);
+    this.password = password;
     this.idCoordinador = idCoordinador;
   }
 
