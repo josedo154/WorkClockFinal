@@ -1,6 +1,3 @@
-import {Jornada} from './Jornada';
-import { hashPassword, validatePassword } from '../../funcionalidades/hast';
-
 export class Empleado {
   id: number;
 

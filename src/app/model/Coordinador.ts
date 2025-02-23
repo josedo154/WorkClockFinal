@@ -1,5 +1,3 @@
-import { hashPassword, validatePassword } from '../../funcionalidades/hast';
-
 export class Coordinador {
   id: number;
 
