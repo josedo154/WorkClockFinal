@@ -10,6 +10,8 @@ import { Empleado } from '../../../../model/Empleado';
 
 @Component({
   selector: 'app-login',
+  imports: [RouterLink],
+  templateUrl: './login.component.html',
   standalone: true,
   imports: [RouterLink, HttpClientModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
@@ -55,4 +57,3 @@ export class LoginComponent {
     }
   }
 }
-

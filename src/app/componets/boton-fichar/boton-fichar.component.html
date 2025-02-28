@@ -1,0 +1,10 @@
+<div class="mx-auto my-4 p-4 border rounded-4 shadow align-content-center text-center" style="max-width: 700px">
+  <button class="mx-auto btn btn-primary btn-lg" *ngIf="mode == ''" (click)="inicio()">Empezar Jornada</button>
+
+  <div *ngIf="mode == 'iniciada'" class="alert alert-info mt-3">
+    La jornada empezó a las: {{ jornada.getInicio() | date:'short' }}
+  </div>
+
+  <button class="btn btn-danger mt-3 btn-lg" *ngIf="mode == 'iniciada'" (click)="fin()">Acabar Jornada</button>
+</div>
+
